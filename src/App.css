@@ -1,13 +1,16 @@
-.container {
+* {
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
+}
+
+.container {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .todo-create {
@@ -35,6 +38,11 @@
     border: none;
     cursor: pointer;
     background-color: #bc00ca90;
+    color: white;
+}
+
+#todo-create-btn:hover {
+    background-color: #bc00ca;
 }
 
 .todo-list {
@@ -72,6 +80,18 @@
 }
 
 .edit-btn:hover {
+    transform: rotate(360deg);
+    transition: 0.9s;
+}
+
+#delete-btn:hover {
     color: rgb(225, 0, 0);
-    font-size: 28px;
+}
+
+#edit-btn:hover {
+    color: blue
+}
+
+#check-btn:hover {
+    color: green
 }
