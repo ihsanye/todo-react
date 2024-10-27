@@ -3,9 +3,13 @@ import { IoIosRemoveCircle } from "react-icons/io"
 import { FaEdit } from "react-icons/fa"
 
 
-function Todo({ todo }) {
+function Todo({ todo, onDeleteTodo }) {
 
     const { id, content } = todo;
+
+    const deleteTodo = () => {
+        onDeleteTodo(id);
+    }
 
     return (
         <div className='todo'>
@@ -13,8 +17,8 @@ function Todo({ todo }) {
                 {content}
             </div>
             <div id='edit-buttons'>
-                <IoIosRemoveCircle />
-                <FaEdit />
+                <IoIosRemoveCircle className='edit-btn' onClick={deleteTodo} />
+                <FaEdit className='edit-btn' />
             </div>
         </div>
     )

@@ -66,3 +66,12 @@
     justify-content: space-evenly;
     color: #bc00ca;
 }
+
+.edit-btn {
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    color: rgb(225, 0, 0);
+    font-size: 28px;
+}
