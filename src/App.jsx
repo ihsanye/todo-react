@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (newTodo) => {
-    setTodos([...todos, newTodo])
+    setTodos([newTodo, ...todos])
   }
 
   console.log(todos)
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='container'>
       <TodoCreate onCreateTodo={addTodo} />
-      <TodoList />
+      <TodoList todos={todos} />
     </div>
   )
 }
